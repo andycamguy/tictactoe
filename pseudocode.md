@@ -48,7 +48,14 @@ OR
 CurrentPlayer = null; //eventually will mean it will be X or O
 END
 
-## Functional
+## Functional\
+
+| -------- | -------- | -------- |
+|     1    |     2    |    3     |
+|----------| ---------|----------|
+|    4     |     5    |     6    |
+|----------| ---------|----------|
+|    7     |     8    |     9    |
 ``` pseudocode
 function Create_the_board()
 {
@@ -72,16 +79,47 @@ else
 
 function wincon horizontal
 {
-if any row is the same symbol, a player wins
+if 1==2 && 2==3 or 4 ==5 && 5==6 or 7==8 && 8==9
+ a player wins based on symbol
+/*
+| -------- | -------- | -------- |
+|     1    |     2    |    3     |
+|----------| ---------|----------|
+|    X     |     X    |     X    |
+|----------| ---------|----------|
+|    7     |     8    |     9    |
+*/
 }
 function wincon vertical
 (
-if any column is the same symbol a player wins
+if 1==4 && 4==7 or 2==5 && 5==7 or 3==6 && 6==9
+a player wins based on symbol
+
+/*
+| -------- | -------- | -------- |
+|    O     |     2    |    3     |
+|----------| ---------|----------|
+|    O     |     5    |     6    |
+|----------| ---------|----------|
+|    O     |     8    |     9    |
+
+*/
+
 }
 
 function wincon diagonal
 {
-if any diagonal is the same symbol, a player wins
+if 1 ==5 && 5==9 or 3==5 && 5==7
+a player wins based on symbol
+/*
+| -------- | -------- | -------- |
+|    O     |     2    |    O     |
+|----------| ---------|----------|
+|    4     |     O    |     6    |
+|----------| ---------|----------|
+|    O     |     8    |     9    |
+
+*/
 }
 
 function tiecheck
