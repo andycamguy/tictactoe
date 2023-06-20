@@ -42,14 +42,45 @@ Player = {
 symbol: " " this is the choice between X or O, do we wish to hard code in the players assignment or give the choice?
 }
 
-Turns = []; We make turns an array to keep track of state to look back at prior turns and see how many turns were made
+Turns = [ ]; We make turns an array to keep track of state to look back at prior turns and see how many turns were made
 
 
 END
 
 ## Functional
+``` pseudocode
+function Create_the_board()
+{
+if(beginning of game or game reset) then
+  {
+  clear set board
+  create grid of 3 by 3
+  all blank in each tile
+  }
+}
 
-Create the board
+function player_assignment()
+(
+if input received and player symbol is X
+{player symbol is now O}
+else
+{player symbol is now X}
 
+}
+// I want this code to be expandable to larger game boards, not just three in a row so it is not wet code. that way I could make connect 4 if i wanted to. not likely
+
+function wincon horizontal
+{
+if any row is the same symbol, a player wins
+}
+function wincon vertical
+(
+if any column is the same symbol a player wins
+}
+
+function wincon diagonal
+{
+if any diagonal is the same symbol, a player wins
+}
 
 
