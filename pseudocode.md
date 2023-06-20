@@ -46,6 +46,8 @@ Turns = [ ]; We make turns an array to keep track of state to look back at prior
 OR
 
 CurrentPlayer = null; //eventually will mean it will be X or O
+
+keep a tally of who is winning
 END
 I totally forgot? how do we tell when the game ends?\
 
@@ -179,3 +181,5 @@ board.tile[i]= symbol based on number
 turns adds the state of the board into its array
 switch the symbol
 }
+if game is complete give option to review the game.
+
