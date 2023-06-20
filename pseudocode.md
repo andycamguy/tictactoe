@@ -47,7 +47,9 @@ OR
 
 CurrentPlayer = null; //eventually will mean it will be X or O
 END
+I totally forgot? how do we tell when the game ends?\
 
+Something Justin would ask me: what does your pseudocode look like and how would you define state? Is it the wind condition(s) Does the board define state. I put in data and gives me a result so that is part of state. After state is defined in game won, do I need to restart state?
 ## Functional
 
 | -------- | -------- | -------- |
@@ -167,3 +169,13 @@ tile 9: {
 }
 
 ```
+OOP methodology. thinking about turns object
+a turn has been made X in 4
+turn 1 saved
+```
+if (player[symbol] makes input in board
+{
+board.tile[i]= symbol based on number
+turns adds the state of the board into its array
+switch the symbol
+}
