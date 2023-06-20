@@ -43,8 +43,9 @@ symbol: " " this is the choice between X or O, do we wish to hard code in the pl
 }
 
 Turns = [ ]; We make turns an array to keep track of state to look back at prior turns and see how many turns were made
+OR
 
-
+CurrentPlayer = null; //eventually will mean it will be X or O
 END
 
 ## Functional
@@ -83,4 +84,8 @@ function wincon diagonal
 if any diagonal is the same symbol, a player wins
 }
 
+function tiecheck
+{
+if 9 turns have passed and there are no more empty spaces not meeting a condition, tis a tie
+}
 
