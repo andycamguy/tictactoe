@@ -5,7 +5,7 @@
 
 ## Procedural
 
-### Beginm
+### Begin
 
 ### INIT
 There are 2 players just like what the rules said, one gets the letter X and the other the letter O
@@ -48,7 +48,7 @@ OR
 CurrentPlayer = null; //eventually will mean it will be X or O
 END
 
-## Functional\
+## Functional
 
 | -------- | -------- | -------- |
 |     1    |     2    |    3     |
@@ -134,4 +134,36 @@ The board as an organism has multiple properties that stores values in 9 coordin
 It can be interacted as long as no player has chosen that coordinate
 
 To take it further with the organism: it can be replicated and saved in array under the Turns array to see which tile was chosen in the turn and which player.
+```pseudocode
+let board = {
+tile 1: {
+  symbol: null //defined either as X or O
+}
+tile 2: {
+  symbol: null //defined either as X or O
+}
+tile 3: {
+  symbol: null //defined either as X or O
+}
+tile 4: {
+  symbol: null //defined either as X or O
+}
+tile 5: {
+  symbol: null //defined either as X or O
+}
+tile 6: {
+  symbol: null //defined either as X or O
+}
+tile 7: {
+  symbol: null //defined either as X or O
+}
+tile 8: {
+  symbol: null //defined either as X or O
+}
+tile 9: {
+  symbol: null //defined either as X or O
+}
 
+}
+
+```
