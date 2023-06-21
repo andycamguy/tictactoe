@@ -54,11 +54,9 @@ I totally forgot? how do we tell when the game ends?\
 Something Justin would ask me: what does your pseudocode look like and how would you define state? Is it the wind condition(s) Does the board define state. I put in data and gives me a result so that is part of state. After state is defined in game won, do I need to restart state?
 ## Functional
 
-| -------- | -------- | -------- |
+
 |     1    |     2    |    3     |
-|----------| ---------|----------|
 |    4     |     5    |     6    |
-|----------| ---------|----------|
 |    7     |     8    |     9    |
 ``` pseudocode
 function Create_the_board()
@@ -70,7 +68,7 @@ if(beginning of game or game reset) then
   all blank in each tile
   }
 }
-
+/* elaborate: how is the grid maade? is it really made one grid space at a time or is it all at once via cloning?
 function player_assignment()
 (
 if input received and player symbol is X
