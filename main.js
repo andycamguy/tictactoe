@@ -25,6 +25,8 @@ boardArray.forEach((item) => { // this is making the grid
   gridContainer.appendChild(gridItem);
 });
 }
+let turns = [];
+let clicks = 0;
 function getInput() {
     let gridItems = document.getElementsByClassName("grid-item"); //this grabs the grid and its items even if they are blank
   
@@ -65,3 +67,4 @@ function resetButton() // this is my reset button funciton. when it is pressed, 
 }
 boardLayout();
 getInput(); // don't forget to call your functions at the end
+//Playerswitch();
