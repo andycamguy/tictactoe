@@ -40,8 +40,22 @@ function getInput() {
           // Perform any other actions you need here based on the click event
         }
         Playerswitch();
+        clicks++;
+        console.log(clicks);
+        console.log(boardArray)
+        winConditions();
       });
+      
     });
+
+  }
+  function winConditions()
+  {
+    let wincon=document.getElementById("winConditions")
+    const isTie = boardArray.every(item => item !== " "&& clicks > 8);
+   // const Win = ;
+    if(isTie){wincon.innerHTML = "It is a tie"; console.log('it is a tie');}
+// either give all the comobs of winning or create a method to check and see how to use array pieces to filter
 
   }
   function Playerswitch()
@@ -61,10 +75,13 @@ function getInput() {
 if 1 is the same as 2 and 3 a player wins
 }
 */
+/*
 function resetButton() // this is my reset button funciton. when it is pressed, it invokes the board layout function
 {
-   //"<div class = 'button'> <button id ='reset'></button></div>"
+    let outputElement = document.getElementById("output");
+   outputElement.innerHTML ="<div class = 'button'> <button id ='reset'></button></div>"
 }
+*/
 boardLayout();
 getInput(); // don't forget to call your functions at the end
-//Playerswitch();
+// resetButton();
