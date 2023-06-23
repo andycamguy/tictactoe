@@ -2,9 +2,27 @@
 <html>
   <head>
     <title>Print Array in HTML</title>
+    <!-- formatting the grid-->
+    <style> 
+        .grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Adjust the number of columns as needed */
+  height: 400px;
+  
+}
+
+.grid-item {
+  border: 1px solid black;
+  padding: 10px;
+  text-align: center;
+}
+    </style>
   </head>
   <body>
-    <div id="output"></div>
+    <div id ="playerSwitch" style ="height: 50px;" ></div>
+    <div id="winConditions" style="height: 100px; width: 400px; font-size: 30px; text-align: center; margin: 0 auto; align-items: center;"></div>
+    <div id="output" style = "font-weight: bold; font-size: 60px;"></div>
+    <div id="resetButton"></div>
 
     <script src="main.js"></script>
   </body>
