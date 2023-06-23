@@ -58,15 +58,15 @@ const winConditions = () => {
   const isTie = boardArray.every((item) => item !== " ");
 
   if (isTie) {
-    alert("It's a tie!");
     resetBoard();
+    alert("It's a tie!");
+    
   } else {
     const isWin = winningCombinations.some((combination) =>
       combination.every((index) => boardArray[index] === currentPlayer)
     );
 
     if (isWin) {
-      alert("Player " + currentPlayer + " wins!");
       if (currentPlayer === "X") {
         playerXscore++;
       } else {
@@ -74,6 +74,11 @@ const winConditions = () => {
       }
       updateScoreboard();
       gameActive = false; // Turn off the game
+      document.getElementById('alertMessage')
+      alertMessage.innerHTML = currentPlayer+ 'wins';
+     // alert("Player " + currentPlayer + " wins!");
+     //alert('you obviously want to play again')
+      resetBoard();
     }
   }
 };
@@ -83,20 +88,20 @@ function resetBoard() {
   boardLayout();
   getInput();
   gameActive = true; // Turn on the game
+  
 }
 
 function createScoreboard() {
   let playerswitch = document.getElementById("playerswitch");
-  playerswitch.innerHTML = "<div class='scoreboard'><span class='score-x'>X - " + playerXscore + "</span><span class='score-separator'>:</span><span class='score-o'>O - " + playerOscore + "</span></div>";
+  //playerswitch.innerHTML = "X - " + playerXscore + " : " + "O - " + playerOscore;
 }
 
 function updateScoreboard() {
-  let scoreX = document.querySelector(".score-x");
-  let scoreO = document.querySelector(".score-o");
-  scoreX.textContent = "X - " + playerXscore;
-  scoreO.textContent = "O - " + playerOscore;
+  let playerswitch = document.getElementById("playerswitch");
+ // playerswitch.innerHTML = "X - " + playerXscore + " : " + "O - " + playerOscore;
 }
 
+// Initial setup
 boardLayout();
 getInput();
 createScoreboard();
